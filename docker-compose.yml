@@ -1,0 +1,15 @@
+version: lastest
+services:
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=company_db
+    ports:
+      - '5432:5432'
+    expose:
+      - 5432
+volumes:
+  postgres:
